@@ -1,4 +1,6 @@
-{
+const itsme  = require('../../nodejs/index');
+
+const privateJwkSet = `{
     "keys": [
         {
             "kty": "RSA",
@@ -29,4 +31,14 @@
             "alg": "RS256"
         }
     ]
-}
+}`;
+const clientId = 'my_client_id';
+const redirectUrl = 'https://i/redirect';
+
+const settings = itsme.createItsmeSettings(clientId, redirectUrl, privateJwkSet);
+const client = new itsme.Client(settings);
+const config = itsme.createUrlConfiguration(['profile', 'email'], 'my_service_code', '');
+const itsmeAuthUrl = client.getAuthenticationUrl(config);
+console.log(itsmeAuthUrl);
+var user = client.getUserDetails('authorization_code_I_received_from_itsme');
+console.log(user);

@@ -1,0 +1,5 @@
+{
+    "version": "0.0.4",
+    "description": "This is a library to integrate with the ITSME backend",
+    "changelog": ["login using ITSME is now working"]
+}

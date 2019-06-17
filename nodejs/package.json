@@ -1,0 +1,16 @@
+{
+  "name": "itsme-pip-bindings",
+  "version": "1.0.23",
+  "description": "pip bindings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Veronica.Cuevas@inthepocket.mobi",
+  "license": "ISC",
+  "dependencies": {
+    "ffi": "^2.3.0",
+    "path": "^0.12.7",
+    "ref-struct": "^1.1.0"
+  }
+}
