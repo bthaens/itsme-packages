@@ -6,6 +6,7 @@
 
 db/
 .vscode/
+libs/
 
 ### C ###
 # Prerequisites
@@ -687,5 +688,5 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/c,osx,linux,csharp,python,windows,intellij,visualstudiocode
 
-## Vim stuff
+# vim stuff
 .*.swp
