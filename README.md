@@ -1,6 +1,6 @@
 # ITSME Packages
 
-
+[![Appveyor Build status][build]][build-link]
 
 ## Prerequisites
 
@@ -54,6 +54,8 @@ Have a look at one of the current bindings to see how this works.
 -   [Jan De Dobbeleer][jdd] (Initial work)
 -   [Roeland Matthijssens][enermis]
 
+[build]: https://ci.appveyor.com/api/projects/status/github/itsme-sdk/itsme-packages?branch=master&svg=true
+[build-link]: https://ci.appveyor.com/project/itsme-sdk/itsme-packages
 [golang]: https://golang.org/doc/install
 [itsme-golang-library]: https://github.com/itsme-sdk/itsme-golang
 [gopath]: https://github.com/golang/go/wiki/GOPATH
