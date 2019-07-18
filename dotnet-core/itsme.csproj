@@ -11,7 +11,7 @@
 
   <Target Name="IncludeITSMELIB">
     <ItemGroup>
-      <BuildOutputInPackage Include="../clang/bin/itsme_lib.dll" />
+      <BuildOutputInPackage Include="./lib/itsme_lib.dll" />
     </ItemGroup>
   </Target>
 

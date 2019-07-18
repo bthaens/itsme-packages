@@ -1,8 +1,20 @@
+from os import name as operating_system
 from setuptools import find_packages, setup
+from subprocess import call
+
+# Download ITSME libraries
+lib_version = '0.5.0.1563364026'
+version = '0.0.4'
+location = './itsme'
+
+if operating_system == 'nt':
+    call(f'../scripts/dependencies.ps1 -libVersion {lib_version} -location {location}', shell=True)
+else:
+    call(f'../scripts/dependencies.sh {lib_version} {location}', shell=True)
 
 setup(
     name='itsme',
-    version='0.0.4',
+    version=version,
     author='itsme_sdk',
     author_email='itsme.store@inthepocket.mobi',
     description='A package to integrate with the itsme OIDC API',
