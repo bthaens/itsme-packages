@@ -1,0 +1,20 @@
+{
+    "keys": [
+        {
+            "kty": "RSA",
+            "use": "sig",
+            "n": "AMtV9Y3P3yqLrXxhDDZXo4Ec8gJ0R1HWGenC93PTC9NtQQdH2yXedWb-0OF1tBXRNrBa-6fJTLRENsFQF7qiC7NNZDavFuVheCk379c-cMm00ZwTKl320a3Deo_WtDYHXQ2KUgE14jc_5O44_J08PFxI0Q2zDgN5XMsM5hpxBfpT6b1-7tg5rqseae4s6q5cfOLNytNyBqSCItJliT2jDEz7dLOCf-whrWSddnybIKIvJGX6fYSz4jTm3dwgufo2sEFJ9aVD3i410BZoQEPRX98qOOps58sSahN2NpkS2en9EhVryrZGZ0RlV5QcJdevuOT3Ol-n7J7fZzGqlRlvTHSxt9AbRk_o_83AgLakwZZ3iYJIwKEoNSDGNPOcyGLxCl45yjC06SmcFUiurH_dfUJPeFINyGPbC-vUn4cftcS2pQOZyJjopY58-YkvyU3wQwBsejBlGEvRhIkcxax--4XZAB5hr4edU7fHWO3gC8bMIp-OSQHwF7nhfHcU0bMkL5kk3FtfSNdHzvV1O_CH7hWULqV5UupD3dzZuCXcyfC5Gf6UhNNeFobV66gnBr_E-iG-Xx9Gp6NnVGzT-64IQAgHW8WZy4EKjzqz4Hx86YHjaogyRw0DYDUNw_adC4IhkBouGXRZ7W3-75zIx0IpuimnIswaFws-HiKmTMQHxTKP",
+            "e": "AQAB",
+            "kid": "excellent-gun",
+            "alg": "RS256"
+        },
+        {
+            "kty": "RSA",
+            "use": "enc",
+            "n": "AJ9iKE2SheSqyAvDMEAGjNfv0v48NjB7yttv__zoVqcp6a3zItFK6R5r9bAxgLA7KRzVmkeGTsd5jyRbYHxsWqfT1mvnd1KC4zWEjWaRJBqsTPmMizUBaJd7GXc6yM42HTf_yAl1R-UvmLq6f5hzV6Sg3ulW7c6fOdscGvAmm16lrAE5k4gPLlSAHvFTsfV5IJxA0DQOrJsKBXo1994PmHKvYNn_6JkeRGfioH45KmDyFalx6ZxA5XSM4c3AvKgXguKeZKE8aWPfE1QHgeEsMqAltcevhtPQvyyG2kBh8pbFvNhkyMRd-Mb4HxS-6GEh1hDMIPXb2ifxgdRpNnaIFj82D3ARTalYB8ibv75VCGCeY_iFN63McWYmkH3j16_rtfgGmlTVGZ3Uj9Z4ifiptdCg0OaittEGW9W7MwcUVXn1b6zhu6zJvjTVH8stbFcfMh27LETVFswm9ISjlZlQFSYT2okMoDJCOtRAgrn8qQHwCUjG6l2NGhSWA4mzZeeygsXhSHTNuxa-2yEpJQTM9fDaJqRdAQikL9LCOi7VqaBg9dpazmC0yC19oEkybwrEu0OCcrI8RVq-iecZEOiWHCpVZuBZAZa8vETe07YxDv4DvwnXZMtVzAeTcfx7ZD13SWYS1fM7PEjRlcrfK3LH7nTV1sM8H4FkcyCw01hdniWL",
+            "e": "AQAB",
+            "kid": "puny-twist",
+            "alg": "RS256"
+        }
+    ]
+}
