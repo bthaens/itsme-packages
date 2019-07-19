@@ -1,12 +1,20 @@
 branches:
   except:
-    - /^v[0-9]/
+  - "/^v[0-9]/"
 os: linux
 dist: trusty
 matrix:
   include:
   - language: python
     python:
-      - "3.6"
+    - '3.6'
     script: cd python && make package
+    deploy:
+      provider: pypi
+      user: itsme-sdk
+      password:
+        secure: eJTmTu3P1BSPgKxGthp0x0bHBHR9LnCM+OJZeOofhmKF3uXFyId18rlsQWQrAHuh55OF2k8vUa1GaNL/gMJHrc3oortAONrTun4BX1rKyzbMyef6KA6hHv0OmWdBAx4lAGAtfMeInexctJJBDlD4rg66dpJyhbC0NpyO7pqBi3k6J0yjkez/Hp5TH/2ZwAPLSHyBxKbB5fWJm9xmPXETmvgwiUR3Fxb3E3gNxlDNdM1UFATAXyKLmLmdx7+hIxViamgJVrjVTGvAjK6f03SoyBnWxT1isCVhNsQdB3E40QyWFPSiH/qBjXhkljs6fQGbkfWNg1yIw2efhp2E4Khl/pECwy63jyUotuOYWG3Oy3po/Ws21cxl0IrRCmDdFEuFzIRsocndQbvCW1LiOONrNFHyfg9rRwGHaGJdBc3PhL6h2HBRy1GtnsRXnrYKOAor02bVPB1yXk2kpRjMWq/q8usMIOADaWhoYU+WO72aq8w35K5fh5Hg3ceETf474dLCXZjcz/sUD5q+fGbXzYN2pOHc+kAnUjgUhfLFJufHSOiddKo+Cf6ELL4D8MaEGsH3GKpArDjtBzhZKedOycpBfA1L+OdINz2zHzbpQo64El8HOuvFTFUTvrd2T7LpY/xEeu9GNAwiHlvmg3L/bVGujd2D5ck9zX6TIxmWn0b5GhM=
+      on:
+        branch: master
+      skip_existing: true
 before_script: chmod +x scripts/dependencies.sh
