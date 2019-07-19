@@ -3,6 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);IncludeITSMELIB</TargetsForTfmSpecificBuildOutput>
+    <PackageId>itsme</PackageId>
+    <Authors>Itsme-SDK</Authors>
+    <Company>Belgian Mobile ID</Company>
+    <Version></Version>
   </PropertyGroup>
 
   <ItemGroup>

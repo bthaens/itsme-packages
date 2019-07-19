@@ -1,6 +1,6 @@
 param(
         [Parameter(Position=0,mandatory=$true)]
-        [ValidateSet('clean','package','distribute')]
+        [ValidateSet('clean','package','distribute', 'publish')]
         [string]
         $command
 )
@@ -19,19 +19,20 @@ function Clear-Output {
 
 function New-Package {
     Clear-Output
-    ../scripts/dependencies.ps1 -libVersion $libVersion -location './lib'
-    dotnet pack --configuration Release --output nupkgs -p:PackageVersion=$($version)
+    ../scripts/dependencies.ps1 -libVersion $libVersion -location './lib' -ErrorAction Stop
+    dotnet pack --configuration Release --output nupkgs -p:PackageVersion=$($version) -p:Version=$($version)
 }
 
 function Publish-Package {
-    New-Package
-    # Add publish logic here
+    $package = (Get-ChildItem nupkgs | Where-Object {$_.extension -eq '.nupkg'} | Select-Object -First 1)
+    dotnet nuget push  "nupkgs\$package" -k $env:NUGET_API_KEY -s https://api.nuget.org/v3/index.json
 }
 
 switch ($command) {
     'clean' {Clear-Output; break}
     'package' {New-Package; break}
     'distribute' {Clear-Output; break}
+    'publish' {Publish-Package; break}
 }
 
 Set-Location $origin

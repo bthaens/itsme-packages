@@ -5,8 +5,16 @@ skip_commits:
   files:
     - .github/*
     - README.md
+environment:
+  NUGET_API_KEY:
+    secure: oM4E3Xt/KeveNhaq9KWF3mwEBjTqF+9W/0PkWF81ioAL003zheUNuSB+EcX+GOu5
 init:
   - ps: git config --global core.autocrlf true
 build_script:
   - ps: cd dotnet-core
   - ps: ./make.ps1 package
+deploy_script:
+  - ps: >-
+      if ($isWindows -and $ENV:APPVEYOR_REPO_BRANCH -eq 'master' -and [string]::IsNullOrWhiteSpace($ENV:APPVEYOR_PULL_REQUEST_NUMBER)) {
+        ./make.ps1 publish
+      }
