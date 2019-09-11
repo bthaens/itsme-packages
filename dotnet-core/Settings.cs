@@ -13,6 +13,9 @@ namespace Itsme
         [JsonProperty(PropertyName = "private_jwk_set")]
         public string PrivateJwkSet { get; set; }
 
+        [JsonProperty(PropertyName = "app_environment")]
+        public string AppEnvironment { get; set; }
+
         internal string ToJson()
         {
             return JsonConvert.SerializeObject(this);

@@ -10,12 +10,13 @@ namespace dotnet_core_api
     {
         private static Dictionary<string, string> _getSettings()
         {
-            var jwks = File.ReadAllText("../keys/jwks_private.json");
+            var jwks = File.ReadAllText("private_jwks.json");
             return new Dictionary<string, string>
             {
-                {"ClientID", "my_client_id"},
-                {"RedirectURI", "https://example.com/production/redirect"},
-                {"PrivateJWKSet", jwks}
+                //{"ClientID", "zEsw0hVPeC"},
+                //{"RedirectURI", "https://example.com/production/redirect"},
+                //{"PrivateJWKSet", jwks},
+                //{"AppEnvironment", "e2e"}
             };
         }
 
