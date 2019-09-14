@@ -2,14 +2,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace dotnet_core_api.Controllers
 {
-    [Route("production/jwks.json")]
+    [Route("jwks.json")]
     [ApiController]
     public class JwksController : ControllerBase
     {
         [HttpGet()]
         public ActionResult<string> Get()
         {
-            var jwks = System.IO.File.ReadAllText("private_jwks.json");
+            var jwks = System.IO.File.ReadAllText("jwks_private.json");
             return Content(jwks, "application/json");
         }
     }

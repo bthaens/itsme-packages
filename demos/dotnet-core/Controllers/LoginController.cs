@@ -3,7 +3,7 @@ using dotnet_core_api.Integrations;
 
 namespace dotnet_core_api.Controllers
 {
-    [Route("production/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class LoginController : ControllerBase
     {

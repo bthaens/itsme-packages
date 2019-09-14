@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System.IO;
@@ -12,13 +13,12 @@ namespace dotnet_core_api.Integrations
     public class ItsmeClient: IItsmeClient
     {
         private Itsme.Client _itsmeClient;
-        public ItsmeClient(IConfiguration config, IUrlHelper urlHelper)
+        public ItsmeClient(IConfiguration config, IUrlHelper urlHelper, IHttpContextAccessor httpContextAccessor)
         {
             var settings = new Itsme.ItsmeSettings();
             settings.ClientId = config.GetValue<string>("ClientID", "zEsw0hVPeC");
-            settings.RedirectUri = config.GetValue<string>("RedirectURI", urlHelper.Action("Redirect", "Get"));
-            settings.PrivateJwkSet = config.GetValue<string>("PrivateJWKSet", File.ReadAllText("private_jwks.json"));
-            settings.AppEnvironment = config.GetValue<string>("AppEnvironment", "e2e");
+            settings.RedirectUri = config.GetValue<string>("RedirectURI", urlHelper.Action("Val", "Box", null, httpContextAccessor.HttpContext.Request.Scheme, httpContextAccessor.HttpContext.Request.Host.Value));
+            settings.PrivateJwkSet = config.GetValue<string>("PrivateJWKSet", File.ReadAllText("jwks_private.json"));
             _itsmeClient = new Itsme.Client(settings);
         }
 

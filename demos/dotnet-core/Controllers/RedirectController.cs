@@ -3,18 +3,18 @@ using dotnet_core_api.Integrations;
 
 namespace dotnet_core_api.Controllers
 {
-    [Route("production/[controller]")]
+    [Route("[controller]/[action]")]
     [ApiController]
-    public class RedirectController : ControllerBase
+    public class BoxController : ControllerBase
     {
         private IItsmeClient _itsmeClient;
-        public RedirectController(IItsmeClient itsmeClient)
+        public BoxController(IItsmeClient itsmeClient)
         {
             _itsmeClient = itsmeClient;
         }
 
         [HttpGet()]
-        public ActionResult<Itsme.User> Get([FromQuery(Name = "code")] string code)
+        public ActionResult<Itsme.User> Val([FromQuery(Name = "code")] string code, string error, string error_description)
         {
             return _itsmeClient.GetUserDetails(code);
         }
