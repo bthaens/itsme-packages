@@ -16,7 +16,8 @@ namespace dotnet_core_api.Controllers
         [HttpGet()]
         public ActionResult<string> Get()
         {
-            return Content($"{{\"url\": \"{_itsmeClient.GetLoginUrl()}\"}}", "application/json");
+         //   return Content($"{{\"url\": \"{_itsmeClient.GetLoginUrl()}\"}}", "application/json");
+            return Redirect(_itsmeClient.GetLoginUrl());
         }
     }
 }

@@ -5,6 +5,7 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     <RootNamespace>dotnet_core_api</RootNamespace>
     <RestoreSources>$(RestoreSources);./nupkgs;https://api.nuget.org/v3/index.json</RestoreSources>
+    <UserSecretsId>455e14f0-37f7-47ca-9de2-06d01c26bd0c</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
